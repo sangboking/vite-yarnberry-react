@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import App from "./App";
-import Test from "./test";
+import App from "@/App";
+import Test from "@/pages/auth/test";
 
 const routes = () => {
   return (

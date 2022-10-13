@@ -1,5 +1,8 @@
 import React from "react";
+import { useRecoilValue } from "recoil";
+import { addNumberSelector } from "@/atom/buttonAtom";
 
 export default function Button() {
-  return <div>button</div>;
+  const changeNumber = useRecoilValue<number>(addNumberSelector);
+  return <div>{changeNumber}</div>;
 }
