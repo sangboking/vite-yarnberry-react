@@ -1,8 +1,13 @@
 import { useState } from "react";
 import styled from "styled-components";
+import Button from "@components/Button";
 
 function App() {
-  return <Wrapper>안녕하세요</Wrapper>;
+  return (
+    <Wrapper>
+      <Button />
+    </Wrapper>
+  );
 }
 
 export default App;
