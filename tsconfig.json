@@ -39,8 +39,11 @@
     "removeComments": true,
     "noEmit": true,
     // :::: path :::: //
-    "baseUrl": "./src",
-    "paths": {},
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["vite-plugin-svgr/client"],
     "typeRoots": ["@types", "./node_modules/@types"]
   }
 }

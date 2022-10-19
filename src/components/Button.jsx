@@ -1,14 +1,17 @@
-import { addNumberSelector } from "store/buttonAtom";
-import React from "react";
+import { addNumberSelector } from "@/store/buttonAtom";
 import { useRecoilValue } from "recoil";
+import { Icon } from "@/assets/svgs";
 
 export default function Button() {
   const number = useRecoilValue(addNumberSelector);
+  console.log(import.meta.env.MODE);
 
   return (
-    <div>
+    <div style={{ display: "flex", alignItems: "center" }}>
       {import.meta.env.VITE_TEST}
       {number}
+      <Icon name="facebook" width="1.5rem" height="1.5rem" />
+      <Icon name="vite" width="1.5rem" height="1.5rem" />
     </div>
   );
 }

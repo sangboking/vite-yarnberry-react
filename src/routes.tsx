@@ -1,15 +1,19 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import App from "App";
-import Test from "pages/auth/test";
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+const Test = React.lazy(() => import("@/pages/auth/test"));
+const App = React.lazy(() => import("@/App"));
 
 const routes = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/test" element={<Test />} />
-      </Routes>
-    </BrowserRouter>
+    <Router>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/test" element={<Test />} />
+        </Routes>
+      </Suspense>
+    </Router>
   );
 };
 
