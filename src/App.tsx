@@ -1,10 +1,13 @@
 import Button from "@/components/Button";
+import { Suspense } from "react";
 import styled from "styled-components";
 
 function App() {
   return (
     <Wrapper>
-      <Button />
+      <Suspense fallback={<div>버튼로딩...</div>}>
+        <Button />
+      </Suspense>
     </Wrapper>
   );
 }

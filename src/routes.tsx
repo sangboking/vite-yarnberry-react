@@ -7,7 +7,7 @@ const App = React.lazy(() => import("@/App"));
 const routes = () => {
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div></div>}>
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/test" element={<Test />} />

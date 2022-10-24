@@ -8,5 +8,6 @@ const icons = {
 
 export const Icon = ({ name, ...props }) => {
   const Element = icons[name];
+
   return <Element {...props} />;
 };

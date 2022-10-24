@@ -4,7 +4,6 @@ import { Icon } from "@/assets/svgs";
 
 export default function Button() {
   const number = useRecoilValue(addNumberSelector);
-  console.log(import.meta.env.MODE);
 
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
