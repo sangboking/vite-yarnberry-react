@@ -11,6 +11,7 @@ export default function Button() {
       {number}
       <Icon name="facebook" width="1.5rem" height="1.5rem" />
       <Icon name="vite" width="1.5rem" height="1.5rem" />
+      <div>안녕하세요</div>
     </div>
   );
 }
