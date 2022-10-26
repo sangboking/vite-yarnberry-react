@@ -44,7 +44,7 @@ jobs:
 
       - name: Deploy
         run: aws deploy create-deployment
-          --testApp
+          --application-name testApp
           --deployment-config-name CodeDeployDefault.AllAtOnce
-          --viteGroup
+          --deployment-group-name viteGroup
           --s3-location bucket=vite-react-s3,key=action/build-fe.zip,bundleType=zip
