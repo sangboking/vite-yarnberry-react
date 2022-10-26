@@ -47,4 +47,4 @@ jobs:
           --testApp
           --deployment-config-name CodeDeployDefault.AllAtOnce
           --viteGroup
-          --s3-location bucket=vite-react-s3,key=/action/build-fe.zip,bundleType=zip
+          --s3-location bucket=vite-react-s3,key=action/build-fe.zip,bundleType=zip
