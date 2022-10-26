@@ -3,11 +3,17 @@ os: linux
 
 files:
   - source: /
-    destination: /usr/share/nginx/html/vite-zip
+    destination: /home/linux/deploy-fe
     overwrite: yes
 
 permissions:
-  - object: /usr/share/nginx/html/vite-zip
+  - object: /home/linux/deploy-fe
     owner: root
     group: root
     mode: 755
+
+hooks:
+  AfterInstall:
+    - location: deploy-fe.sh
+      timeout: 60
+      runas: root
